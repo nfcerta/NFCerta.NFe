@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9761B41C-EC8D-45BB-B321-60DF20976317}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NFCerta.NFe</RootNamespace>
+    <AssemblyName>NFCerta.NFe</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MigraDoc.DocumentObjectModel">
+      <HintPath>..\packages\PDFsharp-MigraDoc-GDI.1.32.4334.0\lib\net20\MigraDoc.DocumentObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.Rendering">
+      <HintPath>..\packages\PDFsharp-MigraDoc-GDI.1.32.4334.0\lib\net20\MigraDoc.Rendering.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.RtfRendering">
+      <HintPath>..\packages\PDFsharp-MigraDoc-GDI.1.32.4334.0\lib\net20\MigraDoc.RtfRendering.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NodaTime">
+      <HintPath>..\packages\NodaTime.1.3.0\lib\net35-Client\NodaTime.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp">
+      <HintPath>..\packages\PDFsharp-MigraDoc-GDI.1.32.4334.0\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting">
+      <HintPath>..\packages\PDFsharp-MigraDoc-GDI.1.32.4334.0\lib\net20\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CertificadoDigital\AssinadorXml.cs" />
+    <Compile Include="Danfe.cs" />
+    <Compile Include="DisposableFile.cs" />
+    <Compile Include="Json\NFCertaJsonSerializer.cs" />
+    <Compile Include="Schemas\Cabecalhos\CabecalhoConsulta.cs" />
+    <Compile Include="Schemas\Cabecalhos\CabecalhoNFeRetAutorizacao.cs" />
+    <Compile Include="Schemas\Cabecalhos\CabecalhoStatus.cs" />
+    <Compile Include="Schemas\Cabecalhos\CabecalhoRecepcaoEvento.cs" />
+    <Compile Include="Schemas\Cabecalhos\ICabecalho.cs" />
+    <Compile Include="Schemas\Cabecalhos\CabecalhoNFeAutorizacao.cs" />
+    <Compile Include="Schemas\Cancelamento\envEventoCancNFe_v1.00.Designer.cs" />
+    <Compile Include="Schemas\Cancelamento\eventoCancNFe_v1.00.Designer.cs" />
+    <Compile Include="Schemas\Cancelamento\procEventoCancNFe_v1.00.designer.cs" />
+    <Compile Include="Schemas\Cancelamento\retEnvEventoCancNFe_v1.00.Designer.cs" />
+    <Compile Include="Schemas\CartaCorrecao\CCe_v1.00.designer.cs" />
+    <Compile Include="Schemas\CartaCorrecao\envCCe_v1.00.designer.cs" />
+    <Compile Include="Schemas\CartaCorrecao\procCCeNFe_v1.00.designer.cs" />
+    <Compile Include="Schemas\CartaCorrecao\retEnvCCe_v1.00.designer.cs" />
+    <Compile Include="Schemas\Extensions\EventoCancelamentoExtensions.cs" />
+    <Compile Include="Schemas\Extensions\TEnviNFeExtensions.cs" />
+    <Compile Include="Schemas\ITemAssinatura.cs" />
+    <Compile Include="Schemas\DownloadNFe\downloadNFe_v1.00.designer.cs" />
+    <Compile Include="Schemas\DownloadNFe\retDownloadNFe_v1.00.designer.cs" />
+    <Compile Include="Schemas\Exceptions\ConsultaRecLote2Exception.cs" />
+    <Compile Include="Schemas\Exceptions\EnviaLote2Exception.cs" />
+    <Compile Include="Schemas\IdentificacaoNFe.cs" />
+    <Compile Include="Schemas\Extensions\TNFeExtensions.cs" />
+    <Compile Include="Schemas\leiauteConsSitNFe_v3.10.Designer.cs" />
+    <Compile Include="Schemas\leiauteConsStatServ_v3.10.Designer.cs" />
+    <Compile Include="Schemas\leiauteInutNFe_v3.10.Designer.cs" />
+    <Compile Include="Schemas\leiauteNFe_3.10.cs" />
+    <Compile Include="Schemas\tiposBasico_v3.10.Designer.cs" />
+    <Compile Include="Schemas\xmldsig-core-schema_v1.01.designer.cs" />
+    <Compile Include="ListaUrl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatusNFe.cs" />
+    <Compile Include="Util\DateTimeHelpers.cs" />
+    <Compile Include="Util\Digit.cs" />
+    <Compile Include="Util\Funcoes.cs" />
+    <Compile Include="Util\Logo.cs" />
+    <Compile Include="Util\QrCodeUtil.cs" />
+    <Compile Include="Util\SefazXmlSerializer.cs" />
+    <Compile Include="Util\SerializerHelpers.cs" />
+    <Compile Include="Util\StringExtensions.cs" />
+    <Compile Include="Util\UfHelpers.cs" />
+    <Compile Include="Util\XmlIcmsCreator.cs" />
+    <Compile Include="Webservice\NFeAutorizacao.cs" />
+    <Compile Include="Webservice\NfeCancelamento2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Webservice\NFeConsulta2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Webservice\NfeDownloadNF.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Webservice\NfeInutilizacao2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Webservice\NFeRetAutorizacao.cs" />
+    <Compile Include="Webservice\NfeStatusServico2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Webservice\RecepcaoEvento.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\External\QRCoder\QRCoder\QRCoder.csproj">
+      <Project>{aece5df3-c379-46ca-bb7d-7bdbe59011fd}</Project>
+      <Name>QRCoder</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

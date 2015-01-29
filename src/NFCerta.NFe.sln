@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NFCerta.NFe", "NFCerta.NFe\NFCerta.NFe.csproj", "{9761B41C-EC8D-45BB-B321-60DF20976317}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NFCerta.NFe.Tests", "NFCerta.NFe.Tests\NFCerta.NFe.Tests.csproj", "{8337EF62-2FCD-4EE4-BE4B-F9698FED1DEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9761B41C-EC8D-45BB-B321-60DF20976317}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9761B41C-EC8D-45BB-B321-60DF20976317}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9761B41C-EC8D-45BB-B321-60DF20976317}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9761B41C-EC8D-45BB-B321-60DF20976317}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8337EF62-2FCD-4EE4-BE4B-F9698FED1DEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8337EF62-2FCD-4EE4-BE4B-F9698FED1DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8337EF62-2FCD-4EE4-BE4B-F9698FED1DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8337EF62-2FCD-4EE4-BE4B-F9698FED1DEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
