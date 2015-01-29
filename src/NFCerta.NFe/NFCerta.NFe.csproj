@@ -66,6 +66,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\External\QRCoder\QRCoder\QRCoder.cs">
+      <Link>Util\QRCoder.cs</Link>
+    </Compile>
     <Compile Include="CertificadoDigital\AssinadorXml.cs" />
     <Compile Include="Danfe.cs" />
     <Compile Include="DisposableFile.cs" />
@@ -141,12 +144,6 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\External\QRCoder\QRCoder\QRCoder.csproj">
-      <Project>{aece5df3-c379-46ca-bb7d-7bdbe59011fd}</Project>
-      <Name>QRCoder</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
