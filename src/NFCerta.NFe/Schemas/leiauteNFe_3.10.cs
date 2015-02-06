@@ -1093,13 +1093,13 @@ namespace NFCerta.NFe.Schemas
         Normal,
 
         [XmlEnumAttribute("2")]
-        Item2,
+        Complementar,
 
         [XmlEnumAttribute("3")]
-        Item3,
+        Ajuste,
 
         [XmlEnumAttribute("4")]
-        Item4,
+        Devolucao,
     }
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
@@ -1107,12 +1107,9 @@ namespace NFCerta.NFe.Schemas
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
     public enum OperacaoComConsumidorFinal
     {
-
-        /// <remarks/>
         [XmlEnumAttribute("0")]
-        Item0,
+        Nao,
 
-        /// <remarks/>
         [XmlEnumAttribute("1")]
         Sim,
     }
@@ -1123,29 +1120,41 @@ namespace NFCerta.NFe.Schemas
     public enum IndicadorPresencaComprador
     {
 
-        /// <remarks/>
+        /// <summary>
+        /// Não se aplica
+        /// </summary>
         [XmlEnumAttribute("0")]
         NaoSeAplica,
 
-        /// <remarks/>
+        /// <summary>
+        /// Não se aplica
+        /// </summary>
         [XmlEnumAttribute("1")]
         Presencial,
 
-        /// <remarks/>
+        /// <summary>
+        /// Operação não presencial, pela Internet
+        /// </summary>
         [XmlEnumAttribute("2")]
-        Item2,
+        Internet,
 
-        /// <remarks/>
+        /// <summary>
+        /// Operação não presencial, Teleatendimento
+        /// </summary>
         [XmlEnumAttribute("3")]
-        Item3,
+        Teleatendimento,
 
-        /// <remarks/>
+        /// <summary>
+        /// NFC-e em operação com entrega em domicílio
+        /// </summary>
         [XmlEnumAttribute("4")]
-        Item4,
+        EntregaDomicilio,
 
-        /// <remarks/>
+        /// <summary>
+        /// Operação não presencial, outros
+        /// </summary>
         [XmlEnumAttribute("9")]
-        Item9,
+        Outros,
     }
 
     /// <summary>
