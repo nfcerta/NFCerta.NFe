@@ -10604,32 +10604,32 @@ namespace NFCerta.NFe.Schemas
         /// </summary>
         [XmlElement(Order = 0)]
         public string vTotTrib { get; set; }
-        [XmlElement("ICMS", typeof(TNFeInfNFeDetImpostoICMS), Order = 1)]
-        [XmlElement("II", typeof(TNFeInfNFeDetImpostoII), Order = 1)]
+        [XmlElement("ICMS", typeof(DetImpostoICMS), Order = 1)]
+        [XmlElement("II", typeof(DetImpostoII), Order = 1)]
         [XmlElement("IPI", typeof(TIpi), Order = 1)]
-        [XmlElement("ISSQN", typeof(TNFeInfNFeDetImpostoISSQN), Order = 1)]
+        [XmlElement("ISSQN", typeof(DetImpostoISSQN), Order = 1)]
         public List<object> Items { get; set; }
         /// <summary>
         /// Dados do PIS
         /// </summary>
         [XmlElement(Order = 2)]
-        public TNFeInfNFeDetImpostoPIS PIS { get; set; }
+        public DetImpostoPIS PIS { get; set; }
         /// <summary>
         /// Dados do PIS Substituição Tributária
         /// </summary>
         [XmlElement(Order = 3)]
-        public TNFeInfNFeDetImpostoPISST PISST { get; set; }
+        public DetImpostoPISST PISST { get; set; }
         /// <summary>
         /// Dados do COFINS
         /// </summary>
         [XmlElement(Order = 4)]
-        public TNFeInfNFeDetImpostoCOFINS COFINS { get; set; }
+        public DetImpostoCOFINS COFINS { get; set; }
         /// <summary>
         /// Dados do COFINS da
         /// Substituição Tributaria;
         /// </summary>
         [XmlElement(Order = 5)]
-        public TNFeInfNFeDetImpostoCOFINSST COFINSST { get; set; }
+        public DetImpostoCOFINSST COFINSST { get; set; }
 
         /// <summary>
         /// TNFeInfNFeDetImposto class constructor
@@ -10838,28 +10838,28 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TNFeInfNFeDetImpostoICMS
+    public partial class DetImpostoICMS
     {
 
         private static XmlSerializer serializer;
 
-        [XmlElement("ICMS00", typeof(TNFeInfNFeDetImpostoICMSICMS00), Order = 0)]
-        [XmlElement("ICMS10", typeof(TNFeInfNFeDetImpostoICMSICMS10), Order = 0)]
-        [XmlElement("ICMS20", typeof(TNFeInfNFeDetImpostoICMSICMS20), Order = 0)]
-        [XmlElement("ICMS30", typeof(TNFeInfNFeDetImpostoICMSICMS30), Order = 0)]
-        [XmlElement("ICMS40", typeof(TNFeInfNFeDetImpostoICMSICMS40), Order = 0)]
-        [XmlElement("ICMS51", typeof(TNFeInfNFeDetImpostoICMSICMS51), Order = 0)]
-        [XmlElement("ICMS60", typeof(TNFeInfNFeDetImpostoICMSICMS60), Order = 0)]
-        [XmlElement("ICMS70", typeof(TNFeInfNFeDetImpostoICMSICMS70), Order = 0)]
-        [XmlElement("ICMS90", typeof(ImpostoICMS90), Order = 0)]
-        [XmlElement("ICMSPart", typeof(TNFeInfNFeDetImpostoICMSICMSPart), Order = 0)]
-        [XmlElement("ICMSSN101", typeof(TNFeInfNFeDetImpostoICMSICMSSN101), Order = 0)]
-        [XmlElement("ICMSSN102", typeof(TNFeInfNFeDetImpostoICMSICMSSN102), Order = 0)]
-        [XmlElement("ICMSSN201", typeof(TNFeInfNFeDetImpostoICMSICMSSN201), Order = 0)]
-        [XmlElement("ICMSSN202", typeof(TNFeInfNFeDetImpostoICMSICMSSN202), Order = 0)]
-        [XmlElement("ICMSSN500", typeof(TNFeInfNFeDetImpostoICMSICMSSN500), Order = 0)]
+        [XmlElement("ICMS00", typeof(ICMS00), Order = 0)]
+        [XmlElement("ICMS10", typeof(ICMS10), Order = 0)]
+        [XmlElement("ICMS20", typeof(ICMS20), Order = 0)]
+        [XmlElement("ICMS30", typeof(ICMS30), Order = 0)]
+        [XmlElement("ICMS40", typeof(ICMS40), Order = 0)]
+        [XmlElement("ICMS51", typeof(ICMS51), Order = 0)]
+        [XmlElement("ICMS60", typeof(ICMS60), Order = 0)]
+        [XmlElement("ICMS70", typeof(ICMS70), Order = 0)]
+        [XmlElement("ICMS90", typeof(ICMS90), Order = 0)]
+        [XmlElement("ICMSPart", typeof(ICMSPart), Order = 0)]
+        [XmlElement("ICMSSN101", typeof(ICMSSN101), Order = 0)]
+        [XmlElement("ICMSSN102", typeof(ICMSSN102), Order = 0)]
+        [XmlElement("ICMSSN201", typeof(ICMSSN201), Order = 0)]
+        [XmlElement("ICMSSN202", typeof(ICMSSN202), Order = 0)]
+        [XmlElement("ICMSSN500", typeof(ICMSSN500), Order = 0)]
         [XmlElement("ICMSSN900", typeof(ImpostoICMSN900), Order = 0)]
-        [XmlElement("ICMSST", typeof(TNFeInfNFeDetImpostoICMSICMSST), Order = 0)]
+        [XmlElement("ICMSST", typeof(ICMSST), Order = 0)]
         public object Item { get; set; }
 
         private static XmlSerializer Serializer
@@ -10868,7 +10868,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(TNFeInfNFeDetImpostoICMS));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(DetImpostoICMS));
                 }
                 return serializer;
             }
@@ -10876,7 +10876,7 @@ namespace NFCerta.NFe.Schemas
 
         #region Serialize/Deserialize
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMS object into an XML string
+        /// Serializes current  object into an XML string
         /// </summary>
         /// <returns>string XML value</returns>
         public virtual string Serialize()
@@ -10905,16 +10905,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes workflow markup into an TNFeInfNFeDetImpostoICMS object
+        /// Deserializes workflow markup into an  object
         /// </summary>
         /// <param name="input">string workflow markup to deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMS object</param>
+        /// <param name="obj">Output  object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMS obj, out Exception exception)
+        public static bool Deserialize(string input, out DetImpostoICMS obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMS);
+            obj = default(DetImpostoICMS);
             try
             {
                 obj = Deserialize(input);
@@ -10927,19 +10927,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMS obj)
+        public static bool Deserialize(string input, out DetImpostoICMS obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMS Deserialize(string input)
+        public static DetImpostoICMS Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((TNFeInfNFeDetImpostoICMS)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((DetImpostoICMS)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -10950,14 +10950,14 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static TNFeInfNFeDetImpostoICMS Deserialize(Stream s)
+        public static DetImpostoICMS Deserialize(Stream s)
         {
-            return ((TNFeInfNFeDetImpostoICMS)(Serializer.Deserialize(s)));
+            return ((DetImpostoICMS)(Serializer.Deserialize(s)));
         }
         #endregion
 
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMS object into file
+        /// Serializes current  object into file
         /// </summary>
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
@@ -10998,16 +10998,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes xml markup from file into an TNFeInfNFeDetImpostoICMS object
+        /// Deserializes xml markup from file into an  object
         /// </summary>
         /// <param name="fileName">string xml file to load and deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMS object</param>
+        /// <param name="obj">Output  object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMS obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out DetImpostoICMS obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMS);
+            obj = default(DetImpostoICMS);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -11020,13 +11020,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMS obj)
+        public static bool LoadFromFile(string fileName, out DetImpostoICMS obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMS LoadFromFile(string fileName)
+        public static DetImpostoICMS LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;
@@ -11057,7 +11057,7 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TNFeInfNFeDetImpostoICMSICMS00
+    public partial class ICMS00
     {
 
         private static XmlSerializer serializer;
@@ -11065,9 +11065,9 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 0)]
         public OrigemMercadoria orig { get; set; }
         [XmlElement(Order = 1)]
-        public TNFeInfNFeDetImpostoICMSICMS00CST CST { get; set; }
+        public ICMS00CST CST { get; set; }
         [XmlElement(Order = 2)]
-        public TNFeInfNFeDetImpostoICMSICMS00ModBC modBC { get; set; }
+        public ICMS00ModBC modBC { get; set; }
         [XmlElement(Order = 3)]
         public string vBC { get; set; }
         [XmlElement(Order = 4)]
@@ -11081,7 +11081,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(TNFeInfNFeDetImpostoICMSICMS00));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(ICMS00));
                 }
                 return serializer;
             }
@@ -11089,7 +11089,7 @@ namespace NFCerta.NFe.Schemas
 
         #region Serialize/Deserialize
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMS00 object into an XML string
+        /// Serializes current ICMS00 object into an XML string
         /// </summary>
         /// <returns>string XML value</returns>
         public virtual string Serialize()
@@ -11118,16 +11118,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes workflow markup into an TNFeInfNFeDetImpostoICMSICMS00 object
+        /// Deserializes workflow markup into an ICMS00 object
         /// </summary>
         /// <param name="input">string workflow markup to deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMS00 object</param>
+        /// <param name="obj">Output ICMS00 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMS00 obj, out Exception exception)
+        public static bool Deserialize(string input, out ICMS00 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMS00);
+            obj = default(ICMS00);
             try
             {
                 obj = Deserialize(input);
@@ -11140,19 +11140,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMS00 obj)
+        public static bool Deserialize(string input, out ICMS00 obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS00 Deserialize(string input)
+        public static ICMS00 Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((TNFeInfNFeDetImpostoICMSICMS00)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((ICMS00)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -11163,14 +11163,14 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS00 Deserialize(Stream s)
+        public static ICMS00 Deserialize(Stream s)
         {
-            return ((TNFeInfNFeDetImpostoICMSICMS00)(Serializer.Deserialize(s)));
+            return ((ICMS00)(Serializer.Deserialize(s)));
         }
         #endregion
 
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMS00 object into file
+        /// Serializes current ICMS00 object into file
         /// </summary>
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
@@ -11211,16 +11211,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes xml markup from file into an TNFeInfNFeDetImpostoICMSICMS00 object
+        /// Deserializes xml markup from file into an ICMS00 object
         /// </summary>
         /// <param name="fileName">string xml file to load and deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMS00 object</param>
+        /// <param name="obj">Output ICMS00 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMS00 obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out ICMS00 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMS00);
+            obj = default(ICMS00);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -11233,13 +11233,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMS00 obj)
+        public static bool LoadFromFile(string fileName, out ICMS00 obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS00 LoadFromFile(string fileName)
+        public static ICMS00 LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;
@@ -11307,7 +11307,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS00CST
+    public enum ICMS00CST
     {
 
         /// <remarks/>
@@ -11318,7 +11318,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS00ModBC
+    public enum ICMS00ModBC
     {
 
         /// <remarks/>
@@ -11342,7 +11342,7 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TNFeInfNFeDetImpostoICMSICMS10
+    public partial class ICMS10
     {
 
         private static XmlSerializer serializer;
@@ -11350,9 +11350,9 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 0)]
         public OrigemMercadoria orig { get; set; }
         [XmlElement(Order = 1)]
-        public TNFeInfNFeDetImpostoICMSICMS10CST CST { get; set; }
+        public ICMS10CST CST { get; set; }
         [XmlElement(Order = 2)]
-        public TNFeInfNFeDetImpostoICMSICMS10ModBC modBC { get; set; }
+        public ICMS10ModBC modBC { get; set; }
         [XmlElement(Order = 3)]
         public string vBC { get; set; }
         [XmlElement(Order = 4)]
@@ -11360,7 +11360,7 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 5)]
         public string vICMS { get; set; }
         [XmlElement(Order = 6)]
-        public TNFeInfNFeDetImpostoICMSICMS10ModBCST modBCST { get; set; }
+        public ICMS10ModBCST modBCST { get; set; }
         [XmlElement(Order = 7)]
         public string pMVAST { get; set; }
         [XmlElement(Order = 8)]
@@ -11378,7 +11378,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(TNFeInfNFeDetImpostoICMSICMS10));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(ICMS10));
                 }
                 return serializer;
             }
@@ -11386,7 +11386,7 @@ namespace NFCerta.NFe.Schemas
 
         #region Serialize/Deserialize
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMS10 object into an XML string
+        /// Serializes current ICMS10 object into an XML string
         /// </summary>
         /// <returns>string XML value</returns>
         public virtual string Serialize()
@@ -11415,16 +11415,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes workflow markup into an TNFeInfNFeDetImpostoICMSICMS10 object
+        /// Deserializes workflow markup into an ICMS10 object
         /// </summary>
         /// <param name="input">string workflow markup to deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMS10 object</param>
+        /// <param name="obj">Output ICMS10 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMS10 obj, out Exception exception)
+        public static bool Deserialize(string input, out ICMS10 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMS10);
+            obj = default(ICMS10);
             try
             {
                 obj = Deserialize(input);
@@ -11437,19 +11437,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMS10 obj)
+        public static bool Deserialize(string input, out ICMS10 obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS10 Deserialize(string input)
+        public static ICMS10 Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((TNFeInfNFeDetImpostoICMSICMS10)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((ICMS10)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -11460,14 +11460,14 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS10 Deserialize(Stream s)
+        public static ICMS10 Deserialize(Stream s)
         {
-            return ((TNFeInfNFeDetImpostoICMSICMS10)(Serializer.Deserialize(s)));
+            return ((ICMS10)(Serializer.Deserialize(s)));
         }
         #endregion
 
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMS10 object into file
+        /// Serializes current ICMS10 object into file
         /// </summary>
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
@@ -11508,16 +11508,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes xml markup from file into an TNFeInfNFeDetImpostoICMSICMS10 object
+        /// Deserializes xml markup from file into an ICMS10 object
         /// </summary>
         /// <param name="fileName">string xml file to load and deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMS10 object</param>
+        /// <param name="obj">Output ICMS10 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMS10 obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out ICMS10 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMS10);
+            obj = default(ICMS10);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -11530,13 +11530,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMS10 obj)
+        public static bool LoadFromFile(string fileName, out ICMS10 obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS10 LoadFromFile(string fileName)
+        public static ICMS10 LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;
@@ -11566,7 +11566,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS10CST
+    public enum ICMS10CST
     {
 
         /// <remarks/>
@@ -11577,7 +11577,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS10ModBC
+    public enum ICMS10ModBC
     {
 
         /// <remarks/>
@@ -11600,7 +11600,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS10ModBCST
+    public enum ICMS10ModBCST
     {
 
         /// <remarks/>
@@ -11632,7 +11632,7 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TNFeInfNFeDetImpostoICMSICMS20
+    public partial class ICMS20
     {
 
         private static XmlSerializer serializer;
@@ -11640,9 +11640,9 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 0)]
         public OrigemMercadoria orig { get; set; }
         [XmlElement(Order = 1)]
-        public TNFeInfNFeDetImpostoICMSICMS20CST CST { get; set; }
+        public ICMS20CST CST { get; set; }
         [XmlElement(Order = 2)]
-        public TNFeInfNFeDetImpostoICMSICMS20ModBC modBC { get; set; }
+        public ICMS20ModBC modBC { get; set; }
         [XmlElement(Order = 3)]
         public string pRedBC { get; set; }
         [XmlElement(Order = 4)]
@@ -11654,7 +11654,7 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 7)]
         public string vICMSDeson { get; set; }
         [XmlElement(Order = 8)]
-        public TNFeInfNFeDetImpostoICMSICMS20MotDesICMS motDesICMS { get; set; }
+        public ICMS20MotDesICMS motDesICMS { get; set; }
 
         private static XmlSerializer Serializer
         {
@@ -11662,7 +11662,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(TNFeInfNFeDetImpostoICMSICMS20));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(ICMS20));
                 }
                 return serializer;
             }
@@ -11670,7 +11670,7 @@ namespace NFCerta.NFe.Schemas
 
         #region Serialize/Deserialize
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMS20 object into an XML string
+        /// Serializes current ICMS20 object into an XML string
         /// </summary>
         /// <returns>string XML value</returns>
         public virtual string Serialize()
@@ -11699,16 +11699,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes workflow markup into an TNFeInfNFeDetImpostoICMSICMS20 object
+        /// Deserializes workflow markup into an ICMS20 object
         /// </summary>
         /// <param name="input">string workflow markup to deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMS20 object</param>
+        /// <param name="obj">Output ICMS20 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMS20 obj, out Exception exception)
+        public static bool Deserialize(string input, out ICMS20 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMS20);
+            obj = default(ICMS20);
             try
             {
                 obj = Deserialize(input);
@@ -11721,19 +11721,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMS20 obj)
+        public static bool Deserialize(string input, out ICMS20 obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS20 Deserialize(string input)
+        public static ICMS20 Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((TNFeInfNFeDetImpostoICMSICMS20)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((ICMS20)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -11744,14 +11744,14 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS20 Deserialize(Stream s)
+        public static ICMS20 Deserialize(Stream s)
         {
-            return ((TNFeInfNFeDetImpostoICMSICMS20)(Serializer.Deserialize(s)));
+            return ((ICMS20)(Serializer.Deserialize(s)));
         }
         #endregion
 
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMS20 object into file
+        /// Serializes current ICMS20 object into file
         /// </summary>
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
@@ -11792,16 +11792,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes xml markup from file into an TNFeInfNFeDetImpostoICMSICMS20 object
+        /// Deserializes xml markup from file into an ICMS20 object
         /// </summary>
         /// <param name="fileName">string xml file to load and deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMS20 object</param>
+        /// <param name="obj">Output ICMS20 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMS20 obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out ICMS20 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMS20);
+            obj = default(ICMS20);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -11814,13 +11814,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMS20 obj)
+        public static bool LoadFromFile(string fileName, out ICMS20 obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS20 LoadFromFile(string fileName)
+        public static ICMS20 LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;
@@ -11850,7 +11850,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS20CST
+    public enum ICMS20CST
     {
 
         /// <remarks/>
@@ -11861,7 +11861,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS20ModBC
+    public enum ICMS20ModBC
     {
 
         /// <remarks/>
@@ -11884,7 +11884,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS20MotDesICMS
+    public enum ICMS20MotDesICMS
     {
 
         /// <remarks/>
@@ -11904,7 +11904,7 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TNFeInfNFeDetImpostoICMSICMS30
+    public partial class ICMS30
     {
 
         private static XmlSerializer serializer;
@@ -11912,9 +11912,9 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 0)]
         public OrigemMercadoria orig { get; set; }
         [XmlElement(Order = 1)]
-        public TNFeInfNFeDetImpostoICMSICMS30CST CST { get; set; }
+        public ICMS30CST CST { get; set; }
         [XmlElement(Order = 2)]
-        public TNFeInfNFeDetImpostoICMSICMS30ModBCST modBCST { get; set; }
+        public ICMS30ModBCST modBCST { get; set; }
         [XmlElement(Order = 3)]
         public string pMVAST { get; set; }
         [XmlElement(Order = 4)]
@@ -11928,7 +11928,7 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 8)]
         public string vICMSDeson { get; set; }
         [XmlElement(Order = 9)]
-        public TNFeInfNFeDetImpostoICMSICMS30MotDesICMS motDesICMS { get; set; }
+        public ICMS30MotDesICMS motDesICMS { get; set; }
 
         private static XmlSerializer Serializer
         {
@@ -11936,7 +11936,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(TNFeInfNFeDetImpostoICMSICMS30));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(ICMS30));
                 }
                 return serializer;
             }
@@ -11944,7 +11944,7 @@ namespace NFCerta.NFe.Schemas
 
         #region Serialize/Deserialize
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMS30 object into an XML string
+        /// Serializes current ICMS30 object into an XML string
         /// </summary>
         /// <returns>string XML value</returns>
         public virtual string Serialize()
@@ -11973,16 +11973,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes workflow markup into an TNFeInfNFeDetImpostoICMSICMS30 object
+        /// Deserializes workflow markup into an ICMS30 object
         /// </summary>
         /// <param name="input">string workflow markup to deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMS30 object</param>
+        /// <param name="obj">Output ICMS30 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMS30 obj, out Exception exception)
+        public static bool Deserialize(string input, out ICMS30 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMS30);
+            obj = default(ICMS30);
             try
             {
                 obj = Deserialize(input);
@@ -11995,19 +11995,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMS30 obj)
+        public static bool Deserialize(string input, out ICMS30 obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS30 Deserialize(string input)
+        public static ICMS30 Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((TNFeInfNFeDetImpostoICMSICMS30)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((ICMS30)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -12018,14 +12018,14 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS30 Deserialize(Stream s)
+        public static ICMS30 Deserialize(Stream s)
         {
-            return ((TNFeInfNFeDetImpostoICMSICMS30)(Serializer.Deserialize(s)));
+            return ((ICMS30)(Serializer.Deserialize(s)));
         }
         #endregion
 
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMS30 object into file
+        /// Serializes current ICMS30 object into file
         /// </summary>
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
@@ -12066,16 +12066,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes xml markup from file into an TNFeInfNFeDetImpostoICMSICMS30 object
+        /// Deserializes xml markup from file into an ICMS30 object
         /// </summary>
         /// <param name="fileName">string xml file to load and deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMS30 object</param>
+        /// <param name="obj">Output ICMS30 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMS30 obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out ICMS30 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMS30);
+            obj = default(ICMS30);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -12088,13 +12088,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMS30 obj)
+        public static bool LoadFromFile(string fileName, out ICMS30 obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS30 LoadFromFile(string fileName)
+        public static ICMS30 LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;
@@ -12124,7 +12124,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS30CST
+    public enum ICMS30CST
     {
 
         /// <remarks/>
@@ -12135,7 +12135,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS30ModBCST
+    public enum ICMS30ModBCST
     {
 
         /// <remarks/>
@@ -12166,7 +12166,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS30MotDesICMS
+    public enum ICMS30MotDesICMS
     {
 
         /// <remarks/>
@@ -12186,7 +12186,7 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TNFeInfNFeDetImpostoICMSICMS40
+    public partial class ICMS40
     {
 
         private static XmlSerializer serializer;
@@ -12194,11 +12194,11 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 0)]
         public OrigemMercadoria orig { get; set; }
         [XmlElement(Order = 1)]
-        public TNFeInfNFeDetImpostoICMSICMS40CST CST { get; set; }
+        public ICMS40CST CST { get; set; }
         [XmlElement(Order = 2)]
         public string vICMSDeson { get; set; }
         [XmlElement(Order = 3)]
-        public TNFeInfNFeDetImpostoICMSICMS40MotDesICMS motDesICMS { get; set; }
+        public ICMS40MotDesICMS motDesICMS { get; set; }
 
         private static XmlSerializer Serializer
         {
@@ -12206,7 +12206,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(TNFeInfNFeDetImpostoICMSICMS40));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(ICMS40));
                 }
                 return serializer;
             }
@@ -12214,7 +12214,7 @@ namespace NFCerta.NFe.Schemas
 
         #region Serialize/Deserialize
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMS40 object into an XML string
+        /// Serializes current ICMS40 object into an XML string
         /// </summary>
         /// <returns>string XML value</returns>
         public virtual string Serialize()
@@ -12243,16 +12243,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes workflow markup into an TNFeInfNFeDetImpostoICMSICMS40 object
+        /// Deserializes workflow markup into an ICMS40 object
         /// </summary>
         /// <param name="input">string workflow markup to deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMS40 object</param>
+        /// <param name="obj">Output ICMS40 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMS40 obj, out Exception exception)
+        public static bool Deserialize(string input, out ICMS40 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMS40);
+            obj = default(ICMS40);
             try
             {
                 obj = Deserialize(input);
@@ -12265,19 +12265,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMS40 obj)
+        public static bool Deserialize(string input, out ICMS40 obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS40 Deserialize(string input)
+        public static ICMS40 Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((TNFeInfNFeDetImpostoICMSICMS40)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((ICMS40)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -12288,14 +12288,14 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS40 Deserialize(Stream s)
+        public static ICMS40 Deserialize(Stream s)
         {
-            return ((TNFeInfNFeDetImpostoICMSICMS40)(Serializer.Deserialize(s)));
+            return ((ICMS40)(Serializer.Deserialize(s)));
         }
         #endregion
 
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMS40 object into file
+        /// Serializes current ICMS40 object into file
         /// </summary>
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
@@ -12336,16 +12336,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes xml markup from file into an TNFeInfNFeDetImpostoICMSICMS40 object
+        /// Deserializes xml markup from file into an ICMS40 object
         /// </summary>
         /// <param name="fileName">string xml file to load and deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMS40 object</param>
+        /// <param name="obj">Output ICMS40 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMS40 obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out ICMS40 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMS40);
+            obj = default(ICMS40);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -12358,13 +12358,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMS40 obj)
+        public static bool LoadFromFile(string fileName, out ICMS40 obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS40 LoadFromFile(string fileName)
+        public static ICMS40 LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;
@@ -12394,7 +12394,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS40CST
+    public enum ICMS40CST
     {
 
         /// <remarks/>
@@ -12413,7 +12413,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS40MotDesICMS
+    public enum ICMS40MotDesICMS
     {
 
         /// <remarks/>
@@ -12461,17 +12461,17 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TNFeInfNFeDetImpostoICMSICMS51
+    public partial class ICMS51
     {
 
-        private System.Nullable<TNFeInfNFeDetImpostoICMSICMS51ModBC> _modBC;
+        private System.Nullable<ICMS51ModBC> _modBC;
 
         private static XmlSerializer serializer;
 
         [XmlElement(Order = 0)]
         public OrigemMercadoria orig { get; set; }
         [XmlElement(Order = 1)]
-        public TNFeInfNFeDetImpostoICMSICMS51CST CST { get; set; }
+        public ICMS51CST CST { get; set; }
         [XmlElement(Order = 3)]
         public string pRedBC { get; set; }
         [XmlElement(Order = 4)]
@@ -12488,7 +12488,7 @@ namespace NFCerta.NFe.Schemas
         public string vICMS { get; set; }
 
         [XmlElement(Order = 2)]
-        public TNFeInfNFeDetImpostoICMSICMS51ModBC modBC
+        public ICMS51ModBC modBC
         {
             get
             {
@@ -12498,7 +12498,7 @@ namespace NFCerta.NFe.Schemas
                 }
                 else
                 {
-                    return default(TNFeInfNFeDetImpostoICMSICMS51ModBC);
+                    return default(ICMS51ModBC);
                 }
             }
             set
@@ -12529,7 +12529,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(TNFeInfNFeDetImpostoICMSICMS51));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(ICMS51));
                 }
                 return serializer;
             }
@@ -12537,7 +12537,7 @@ namespace NFCerta.NFe.Schemas
 
         #region Serialize/Deserialize
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMS51 object into an XML string
+        /// Serializes current ICMS51 object into an XML string
         /// </summary>
         /// <returns>string XML value</returns>
         public virtual string Serialize()
@@ -12566,16 +12566,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes workflow markup into an TNFeInfNFeDetImpostoICMSICMS51 object
+        /// Deserializes workflow markup into an ICMS51 object
         /// </summary>
         /// <param name="input">string workflow markup to deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMS51 object</param>
+        /// <param name="obj">Output ICMS51 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMS51 obj, out Exception exception)
+        public static bool Deserialize(string input, out ICMS51 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMS51);
+            obj = default(ICMS51);
             try
             {
                 obj = Deserialize(input);
@@ -12588,19 +12588,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMS51 obj)
+        public static bool Deserialize(string input, out ICMS51 obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS51 Deserialize(string input)
+        public static ICMS51 Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((TNFeInfNFeDetImpostoICMSICMS51)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((ICMS51)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -12611,14 +12611,14 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS51 Deserialize(Stream s)
+        public static ICMS51 Deserialize(Stream s)
         {
-            return ((TNFeInfNFeDetImpostoICMSICMS51)(Serializer.Deserialize(s)));
+            return ((ICMS51)(Serializer.Deserialize(s)));
         }
         #endregion
 
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMS51 object into file
+        /// Serializes current ICMS51 object into file
         /// </summary>
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
@@ -12659,16 +12659,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes xml markup from file into an TNFeInfNFeDetImpostoICMSICMS51 object
+        /// Deserializes xml markup from file into an ICMS51 object
         /// </summary>
         /// <param name="fileName">string xml file to load and deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMS51 object</param>
+        /// <param name="obj">Output ICMS51 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMS51 obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out ICMS51 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMS51);
+            obj = default(ICMS51);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -12681,13 +12681,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMS51 obj)
+        public static bool LoadFromFile(string fileName, out ICMS51 obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS51 LoadFromFile(string fileName)
+        public static ICMS51 LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;
@@ -12717,7 +12717,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS51CST
+    public enum ICMS51CST
     {
 
         /// <remarks/>
@@ -12728,7 +12728,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS51ModBC
+    public enum ICMS51ModBC
     {
 
         /// <remarks/>
@@ -12752,7 +12752,7 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TNFeInfNFeDetImpostoICMSICMS60
+    public partial class ICMS60
     {
 
         private static XmlSerializer serializer;
@@ -12760,7 +12760,7 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 0)]
         public OrigemMercadoria orig { get; set; }
         [XmlElement(Order = 1)]
-        public TNFeInfNFeDetImpostoICMSICMS60CST CST { get; set; }
+        public ICMS60CST CST { get; set; }
         [XmlElement(Order = 2)]
         public string vBCSTRet { get; set; }
         [XmlElement(Order = 3)]
@@ -12772,7 +12772,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(TNFeInfNFeDetImpostoICMSICMS60));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(ICMS60));
                 }
                 return serializer;
             }
@@ -12780,7 +12780,7 @@ namespace NFCerta.NFe.Schemas
 
         #region Serialize/Deserialize
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMS60 object into an XML string
+        /// Serializes current ICMS60 object into an XML string
         /// </summary>
         /// <returns>string XML value</returns>
         public virtual string Serialize()
@@ -12809,16 +12809,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes workflow markup into an TNFeInfNFeDetImpostoICMSICMS60 object
+        /// Deserializes workflow markup into an ICMS60 object
         /// </summary>
         /// <param name="input">string workflow markup to deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMS60 object</param>
+        /// <param name="obj">Output ICMS60 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMS60 obj, out Exception exception)
+        public static bool Deserialize(string input, out ICMS60 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMS60);
+            obj = default(ICMS60);
             try
             {
                 obj = Deserialize(input);
@@ -12831,19 +12831,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMS60 obj)
+        public static bool Deserialize(string input, out ICMS60 obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS60 Deserialize(string input)
+        public static ICMS60 Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((TNFeInfNFeDetImpostoICMSICMS60)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((ICMS60)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -12854,14 +12854,14 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS60 Deserialize(Stream s)
+        public static ICMS60 Deserialize(Stream s)
         {
-            return ((TNFeInfNFeDetImpostoICMSICMS60)(Serializer.Deserialize(s)));
+            return ((ICMS60)(Serializer.Deserialize(s)));
         }
         #endregion
 
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMS60 object into file
+        /// Serializes current ICMS60 object into file
         /// </summary>
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
@@ -12902,16 +12902,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes xml markup from file into an TNFeInfNFeDetImpostoICMSICMS60 object
+        /// Deserializes xml markup from file into an ICMS60 object
         /// </summary>
         /// <param name="fileName">string xml file to load and deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMS60 object</param>
+        /// <param name="obj">Output ICMS60 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMS60 obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out ICMS60 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMS60);
+            obj = default(ICMS60);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -12924,13 +12924,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMS60 obj)
+        public static bool LoadFromFile(string fileName, out ICMS60 obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS60 LoadFromFile(string fileName)
+        public static ICMS60 LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;
@@ -12960,7 +12960,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS60CST
+    public enum ICMS60CST
     {
 
         /// <remarks/>
@@ -12972,7 +12972,7 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TNFeInfNFeDetImpostoICMSICMS70
+    public partial class ICMS70
     {
 
         private static XmlSerializer serializer;
@@ -12980,9 +12980,9 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 0)]
         public OrigemMercadoria orig { get; set; }
         [XmlElement(Order = 1)]
-        public TNFeInfNFeDetImpostoICMSICMS70CST CST { get; set; }
+        public ICMS70CST CST { get; set; }
         [XmlElement(Order = 2)]
-        public TNFeInfNFeDetImpostoICMSICMS70ModBC modBC { get; set; }
+        public ICMS70ModBC modBC { get; set; }
         [XmlElement(Order = 3)]
         public string pRedBC { get; set; }
         [XmlElement(Order = 4)]
@@ -12992,7 +12992,7 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 6)]
         public string vICMS { get; set; }
         [XmlElement(Order = 7)]
-        public TNFeInfNFeDetImpostoICMSICMS70ModBCST modBCST { get; set; }
+        public ICMS70ModBCST modBCST { get; set; }
         [XmlElement(Order = 8)]
         public string pMVAST { get; set; }
         [XmlElement(Order = 9)]
@@ -13006,7 +13006,7 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 13)]
         public string vICMSDeson { get; set; }
         [XmlElement(Order = 14)]
-        public TNFeInfNFeDetImpostoICMSICMS70MotDesICMS motDesICMS { get; set; }
+        public ICMS70MotDesICMS motDesICMS { get; set; }
 
         private static XmlSerializer Serializer
         {
@@ -13014,7 +13014,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(TNFeInfNFeDetImpostoICMSICMS70));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(ICMS70));
                 }
                 return serializer;
             }
@@ -13022,7 +13022,7 @@ namespace NFCerta.NFe.Schemas
 
         #region Serialize/Deserialize
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMS70 object into an XML string
+        /// Serializes current ICMS70 object into an XML string
         /// </summary>
         /// <returns>string XML value</returns>
         public virtual string Serialize()
@@ -13051,16 +13051,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes workflow markup into an TNFeInfNFeDetImpostoICMSICMS70 object
+        /// Deserializes workflow markup into an ICMS70 object
         /// </summary>
         /// <param name="input">string workflow markup to deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMS70 object</param>
+        /// <param name="obj">Output ICMS70 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMS70 obj, out Exception exception)
+        public static bool Deserialize(string input, out ICMS70 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMS70);
+            obj = default(ICMS70);
             try
             {
                 obj = Deserialize(input);
@@ -13073,19 +13073,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMS70 obj)
+        public static bool Deserialize(string input, out ICMS70 obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS70 Deserialize(string input)
+        public static ICMS70 Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((TNFeInfNFeDetImpostoICMSICMS70)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((ICMS70)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -13096,14 +13096,14 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS70 Deserialize(Stream s)
+        public static ICMS70 Deserialize(Stream s)
         {
-            return ((TNFeInfNFeDetImpostoICMSICMS70)(Serializer.Deserialize(s)));
+            return ((ICMS70)(Serializer.Deserialize(s)));
         }
         #endregion
 
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMS70 object into file
+        /// Serializes current ICMS70 object into file
         /// </summary>
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
@@ -13144,16 +13144,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes xml markup from file into an TNFeInfNFeDetImpostoICMSICMS70 object
+        /// Deserializes xml markup from file into an ICMS70 object
         /// </summary>
         /// <param name="fileName">string xml file to load and deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMS70 object</param>
+        /// <param name="obj">Output ICMS70 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMS70 obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out ICMS70 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMS70);
+            obj = default(ICMS70);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -13166,13 +13166,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMS70 obj)
+        public static bool LoadFromFile(string fileName, out ICMS70 obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMS70 LoadFromFile(string fileName)
+        public static ICMS70 LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;
@@ -13202,7 +13202,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS70CST
+    public enum ICMS70CST
     {
 
         /// <remarks/>
@@ -13213,7 +13213,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS70ModBC
+    public enum ICMS70ModBC
     {
 
         /// <remarks/>
@@ -13236,7 +13236,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS70ModBCST
+    public enum ICMS70ModBCST
     {
 
         /// <remarks/>
@@ -13267,7 +13267,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS70MotDesICMS
+    public enum ICMS70MotDesICMS
     {
 
         /// <remarks/>
@@ -13287,7 +13287,7 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class ImpostoICMS90
+    public partial class ICMS90
     {
 
         private static XmlSerializer serializer;
@@ -13295,9 +13295,9 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 0)]
         public OrigemMercadoria orig { get; set; }
         [XmlElement(Order = 1)]
-        public TNFeInfNFeDetImpostoICMSICMS90CST CST { get; set; }
+        public ICMS90CST CST { get; set; }
         [XmlElement(Order = 2)]
-        public TNFeInfNFeDetImpostoICMSICMS90ModBC modBC { get; set; }
+        public ICMS90ModBC modBC { get; set; }
         [XmlElement(Order = 3)]
         public string vBC { get; set; }
         [XmlElement(Order = 4)]
@@ -13307,7 +13307,7 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 6)]
         public string vICMS { get; set; }
         [XmlElement(Order = 7)]
-        public TNFeInfNFeDetImpostoICMSICMS90ModBCST modBCST { get; set; }
+        public ICMS90ModBCST modBCST { get; set; }
         [XmlElement(Order = 8)]
         public string pMVAST { get; set; }
         [XmlElement(Order = 9)]
@@ -13321,7 +13321,7 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 13)]
         public string vICMSDeson { get; set; }
         [XmlElement(Order = 14)]
-        public TNFeInfNFeDetImpostoICMSICMS90MotDesICMS motDesICMS { get; set; }
+        public ICMS90MotDesICMS motDesICMS { get; set; }
 
         private static XmlSerializer Serializer
         {
@@ -13329,7 +13329,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(ImpostoICMS90));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(ICMS90));
                 }
                 return serializer;
             }
@@ -13337,7 +13337,7 @@ namespace NFCerta.NFe.Schemas
 
         #region Serialize/Deserialize
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMS90 object into an XML string
+        /// Serializes current ICMS90 object into an XML string
         /// </summary>
         /// <returns>string XML value</returns>
         public virtual string Serialize()
@@ -13366,16 +13366,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes workflow markup into an TNFeInfNFeDetImpostoICMSICMS90 object
+        /// Deserializes workflow markup into an ICMS90 object
         /// </summary>
         /// <param name="input">string workflow markup to deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMS90 object</param>
+        /// <param name="obj">Output ICMS90 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out ImpostoICMS90 obj, out Exception exception)
+        public static bool Deserialize(string input, out ICMS90 obj, out Exception exception)
         {
             exception = null;
-            obj = default(ImpostoICMS90);
+            obj = default(ICMS90);
             try
             {
                 obj = Deserialize(input);
@@ -13388,19 +13388,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out ImpostoICMS90 obj)
+        public static bool Deserialize(string input, out ICMS90 obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static ImpostoICMS90 Deserialize(string input)
+        public static ICMS90 Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((ImpostoICMS90)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((ICMS90)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -13411,14 +13411,14 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static ImpostoICMS90 Deserialize(Stream s)
+        public static ICMS90 Deserialize(Stream s)
         {
-            return ((ImpostoICMS90)(Serializer.Deserialize(s)));
+            return ((ICMS90)(Serializer.Deserialize(s)));
         }
         #endregion
 
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMS90 object into file
+        /// Serializes current ICMS90 object into file
         /// </summary>
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
@@ -13459,16 +13459,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes xml markup from file into an TNFeInfNFeDetImpostoICMSICMS90 object
+        /// Deserializes xml markup from file into an ICMS90 object
         /// </summary>
         /// <param name="fileName">string xml file to load and deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMS90 object</param>
+        /// <param name="obj">Output ICMS90 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out ImpostoICMS90 obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out ICMS90 obj, out Exception exception)
         {
             exception = null;
-            obj = default(ImpostoICMS90);
+            obj = default(ICMS90);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -13481,13 +13481,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out ImpostoICMS90 obj)
+        public static bool LoadFromFile(string fileName, out ICMS90 obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static ImpostoICMS90 LoadFromFile(string fileName)
+        public static ICMS90 LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;
@@ -13517,7 +13517,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS90CST
+    public enum ICMS90CST
     {
 
         /// <remarks/>
@@ -13528,7 +13528,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS90ModBC
+    public enum ICMS90ModBC
     {
 
         /// <remarks/>
@@ -13551,7 +13551,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS90ModBCST
+    public enum ICMS90ModBCST
     {
 
         /// <remarks/>
@@ -13582,7 +13582,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMS90MotDesICMS
+    public enum ICMS90MotDesICMS
     {
 
         /// <remarks/>
@@ -13602,7 +13602,7 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TNFeInfNFeDetImpostoICMSICMSPart
+    public partial class ICMSPart
     {
 
         private static XmlSerializer serializer;
@@ -13610,9 +13610,9 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 0)]
         public OrigemMercadoria orig { get; set; }
         [XmlElement(Order = 1)]
-        public TNFeInfNFeDetImpostoICMSICMSPartCST CST { get; set; }
+        public ICMSPartCST CST { get; set; }
         [XmlElement(Order = 2)]
-        public TNFeInfNFeDetImpostoICMSICMSPartModBC modBC { get; set; }
+        public ICMSPartModBC modBC { get; set; }
         [XmlElement(Order = 3)]
         public string vBC { get; set; }
         [XmlElement(Order = 4)]
@@ -13622,7 +13622,7 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 6)]
         public string vICMS { get; set; }
         [XmlElement(Order = 7)]
-        public TNFeInfNFeDetImpostoICMSICMSPartModBCST modBCST { get; set; }
+        public ICMSPartModBCST modBCST { get; set; }
         [XmlElement(Order = 8)]
         public string pMVAST { get; set; }
         [XmlElement(Order = 9)]
@@ -13644,7 +13644,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(TNFeInfNFeDetImpostoICMSICMSPart));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(ICMSPart));
                 }
                 return serializer;
             }
@@ -13652,7 +13652,7 @@ namespace NFCerta.NFe.Schemas
 
         #region Serialize/Deserialize
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMSPart object into an XML string
+        /// Serializes current ICMSPart object into an XML string
         /// </summary>
         /// <returns>string XML value</returns>
         public virtual string Serialize()
@@ -13681,16 +13681,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes workflow markup into an TNFeInfNFeDetImpostoICMSICMSPart object
+        /// Deserializes workflow markup into an ICMSPart object
         /// </summary>
         /// <param name="input">string workflow markup to deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMSPart object</param>
+        /// <param name="obj">Output ICMSPart object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMSPart obj, out Exception exception)
+        public static bool Deserialize(string input, out ICMSPart obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMSPart);
+            obj = default(ICMSPart);
             try
             {
                 obj = Deserialize(input);
@@ -13703,19 +13703,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMSPart obj)
+        public static bool Deserialize(string input, out ICMSPart obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMSPart Deserialize(string input)
+        public static ICMSPart Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((TNFeInfNFeDetImpostoICMSICMSPart)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((ICMSPart)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -13726,14 +13726,14 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMSPart Deserialize(Stream s)
+        public static ICMSPart Deserialize(Stream s)
         {
-            return ((TNFeInfNFeDetImpostoICMSICMSPart)(Serializer.Deserialize(s)));
+            return ((ICMSPart)(Serializer.Deserialize(s)));
         }
         #endregion
 
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMSPart object into file
+        /// Serializes current ICMSPart object into file
         /// </summary>
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
@@ -13774,16 +13774,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes xml markup from file into an TNFeInfNFeDetImpostoICMSICMSPart object
+        /// Deserializes xml markup from file into an ICMSPart object
         /// </summary>
         /// <param name="fileName">string xml file to load and deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMSPart object</param>
+        /// <param name="obj">Output ICMSPart object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMSPart obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out ICMSPart obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMSPart);
+            obj = default(ICMSPart);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -13796,13 +13796,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMSPart obj)
+        public static bool LoadFromFile(string fileName, out ICMSPart obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMSPart LoadFromFile(string fileName)
+        public static ICMSPart LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;
@@ -13832,7 +13832,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMSPartCST
+    public enum ICMSPartCST
     {
 
         /// <remarks/>
@@ -13847,7 +13847,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMSPartModBC
+    public enum ICMSPartModBC
     {
 
         /// <remarks/>
@@ -13870,7 +13870,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMSPartModBCST
+    public enum ICMSPartModBCST
     {
 
         /// <remarks/>
@@ -13902,7 +13902,7 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TNFeInfNFeDetImpostoICMSICMSSN101
+    public partial class ICMSSN101
     {
 
         private static XmlSerializer serializer;
@@ -13910,7 +13910,7 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 0)]
         public OrigemMercadoria orig { get; set; }
         [XmlElement(Order = 1)]
-        public TNFeInfNFeDetImpostoICMSICMSSN101CSOSN CSOSN { get; set; }
+        public ICMSSN101CSOSN CSOSN { get; set; }
         [XmlElement(Order = 2)]
         public string pCredSN { get; set; }
         [XmlElement(Order = 3)]
@@ -13922,7 +13922,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(TNFeInfNFeDetImpostoICMSICMSSN101));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(ICMSSN101));
                 }
                 return serializer;
             }
@@ -13930,7 +13930,7 @@ namespace NFCerta.NFe.Schemas
 
         #region Serialize/Deserialize
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMSSN101 object into an XML string
+        /// Serializes current ICMSSN101 object into an XML string
         /// </summary>
         /// <returns>string XML value</returns>
         public virtual string Serialize()
@@ -13959,16 +13959,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes workflow markup into an TNFeInfNFeDetImpostoICMSICMSSN101 object
+        /// Deserializes workflow markup into an ICMSSN101 object
         /// </summary>
         /// <param name="input">string workflow markup to deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMSSN101 object</param>
+        /// <param name="obj">Output ICMSSN101 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMSSN101 obj, out Exception exception)
+        public static bool Deserialize(string input, out ICMSSN101 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMSSN101);
+            obj = default(ICMSSN101);
             try
             {
                 obj = Deserialize(input);
@@ -13981,19 +13981,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMSSN101 obj)
+        public static bool Deserialize(string input, out ICMSSN101 obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMSSN101 Deserialize(string input)
+        public static ICMSSN101 Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((TNFeInfNFeDetImpostoICMSICMSSN101)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((ICMSSN101)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -14004,14 +14004,14 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMSSN101 Deserialize(Stream s)
+        public static ICMSSN101 Deserialize(Stream s)
         {
-            return ((TNFeInfNFeDetImpostoICMSICMSSN101)(Serializer.Deserialize(s)));
+            return ((ICMSSN101)(Serializer.Deserialize(s)));
         }
         #endregion
 
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMSSN101 object into file
+        /// Serializes current ICMSSN101 object into file
         /// </summary>
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
@@ -14052,16 +14052,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes xml markup from file into an TNFeInfNFeDetImpostoICMSICMSSN101 object
+        /// Deserializes xml markup from file into an ICMSSN101 object
         /// </summary>
         /// <param name="fileName">string xml file to load and deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMSSN101 object</param>
+        /// <param name="obj">Output ICMSSN101 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMSSN101 obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out ICMSSN101 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMSSN101);
+            obj = default(ICMSSN101);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -14074,13 +14074,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMSSN101 obj)
+        public static bool LoadFromFile(string fileName, out ICMSSN101 obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMSSN101 LoadFromFile(string fileName)
+        public static ICMSSN101 LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;
@@ -14110,7 +14110,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMSSN101CSOSN
+    public enum ICMSSN101CSOSN
     {
 
         /// <remarks/>
@@ -14122,7 +14122,7 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TNFeInfNFeDetImpostoICMSICMSSN102
+    public partial class ICMSSN102
     {
 
         private static XmlSerializer serializer;
@@ -14130,7 +14130,7 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 0)]
         public OrigemMercadoria orig { get; set; }
         [XmlElement(Order = 1)]
-        public TNFeInfNFeDetImpostoICMSICMSSN102CSOSN CSOSN { get; set; }
+        public ICMSSN102CSOSN CSOSN { get; set; }
 
         private static XmlSerializer Serializer
         {
@@ -14138,7 +14138,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(TNFeInfNFeDetImpostoICMSICMSSN102));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(ICMSSN102));
                 }
                 return serializer;
             }
@@ -14146,7 +14146,7 @@ namespace NFCerta.NFe.Schemas
 
         #region Serialize/Deserialize
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMSSN102 object into an XML string
+        /// Serializes current ICMSSN102 object into an XML string
         /// </summary>
         /// <returns>string XML value</returns>
         public virtual string Serialize()
@@ -14175,16 +14175,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes workflow markup into an TNFeInfNFeDetImpostoICMSICMSSN102 object
+        /// Deserializes workflow markup into an ICMSSN102 object
         /// </summary>
         /// <param name="input">string workflow markup to deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMSSN102 object</param>
+        /// <param name="obj">Output ICMSSN102 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMSSN102 obj, out Exception exception)
+        public static bool Deserialize(string input, out ICMSSN102 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMSSN102);
+            obj = default(ICMSSN102);
             try
             {
                 obj = Deserialize(input);
@@ -14197,19 +14197,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMSSN102 obj)
+        public static bool Deserialize(string input, out ICMSSN102 obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMSSN102 Deserialize(string input)
+        public static ICMSSN102 Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((TNFeInfNFeDetImpostoICMSICMSSN102)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((ICMSSN102)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -14220,14 +14220,14 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMSSN102 Deserialize(Stream s)
+        public static ICMSSN102 Deserialize(Stream s)
         {
-            return ((TNFeInfNFeDetImpostoICMSICMSSN102)(Serializer.Deserialize(s)));
+            return ((ICMSSN102)(Serializer.Deserialize(s)));
         }
         #endregion
 
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMSSN102 object into file
+        /// Serializes current ICMSSN102 object into file
         /// </summary>
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
@@ -14268,16 +14268,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes xml markup from file into an TNFeInfNFeDetImpostoICMSICMSSN102 object
+        /// Deserializes xml markup from file into an ICMSSN102 object
         /// </summary>
         /// <param name="fileName">string xml file to load and deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMSSN102 object</param>
+        /// <param name="obj">Output ICMSSN102 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMSSN102 obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out ICMSSN102 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMSSN102);
+            obj = default(ICMSSN102);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -14290,13 +14290,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMSSN102 obj)
+        public static bool LoadFromFile(string fileName, out ICMSSN102 obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMSSN102 LoadFromFile(string fileName)
+        public static ICMSSN102 LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;
@@ -14326,7 +14326,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMSSN102CSOSN
+    public enum ICMSSN102CSOSN
     {
 
         /// <remarks/>
@@ -14350,7 +14350,7 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TNFeInfNFeDetImpostoICMSICMSSN201
+    public partial class ICMSSN201
     {
 
         private static XmlSerializer serializer;
@@ -14358,9 +14358,9 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 0)]
         public OrigemMercadoria orig { get; set; }
         [XmlElement(Order = 1)]
-        public TNFeInfNFeDetImpostoICMSICMSSN201CSOSN CSOSN { get; set; }
+        public ICMSSN201CSOSN CSOSN { get; set; }
         [XmlElement(Order = 2)]
-        public TNFeInfNFeDetImpostoICMSICMSSN201ModBCST modBCST { get; set; }
+        public ICMSSN201ModBCST modBCST { get; set; }
         [XmlElement(Order = 3)]
         public string pMVAST { get; set; }
         [XmlElement(Order = 4)]
@@ -14382,7 +14382,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(TNFeInfNFeDetImpostoICMSICMSSN201));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(ICMSSN201));
                 }
                 return serializer;
             }
@@ -14390,7 +14390,7 @@ namespace NFCerta.NFe.Schemas
 
         #region Serialize/Deserialize
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMSSN201 object into an XML string
+        /// Serializes current ICMSSN201 object into an XML string
         /// </summary>
         /// <returns>string XML value</returns>
         public virtual string Serialize()
@@ -14419,16 +14419,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes workflow markup into an TNFeInfNFeDetImpostoICMSICMSSN201 object
+        /// Deserializes workflow markup into an ICMSSN201 object
         /// </summary>
         /// <param name="input">string workflow markup to deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMSSN201 object</param>
+        /// <param name="obj">Output ICMSSN201 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMSSN201 obj, out Exception exception)
+        public static bool Deserialize(string input, out ICMSSN201 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMSSN201);
+            obj = default(ICMSSN201);
             try
             {
                 obj = Deserialize(input);
@@ -14441,19 +14441,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMSSN201 obj)
+        public static bool Deserialize(string input, out ICMSSN201 obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMSSN201 Deserialize(string input)
+        public static ICMSSN201 Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((TNFeInfNFeDetImpostoICMSICMSSN201)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((ICMSSN201)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -14464,14 +14464,14 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMSSN201 Deserialize(Stream s)
+        public static ICMSSN201 Deserialize(Stream s)
         {
-            return ((TNFeInfNFeDetImpostoICMSICMSSN201)(Serializer.Deserialize(s)));
+            return ((ICMSSN201)(Serializer.Deserialize(s)));
         }
         #endregion
 
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMSSN201 object into file
+        /// Serializes current ICMSSN201 object into file
         /// </summary>
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
@@ -14512,16 +14512,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes xml markup from file into an TNFeInfNFeDetImpostoICMSICMSSN201 object
+        /// Deserializes xml markup from file into an ICMSSN201 object
         /// </summary>
         /// <param name="fileName">string xml file to load and deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMSSN201 object</param>
+        /// <param name="obj">Output ICMSSN201 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMSSN201 obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out ICMSSN201 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMSSN201);
+            obj = default(ICMSSN201);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -14534,13 +14534,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMSSN201 obj)
+        public static bool LoadFromFile(string fileName, out ICMSSN201 obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMSSN201 LoadFromFile(string fileName)
+        public static ICMSSN201 LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;
@@ -14570,7 +14570,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMSSN201CSOSN
+    public enum ICMSSN201CSOSN
     {
 
         /// <remarks/>
@@ -14581,7 +14581,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMSSN201ModBCST
+    public enum ICMSSN201ModBCST
     {
 
         /// <remarks/>
@@ -14613,7 +14613,7 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TNFeInfNFeDetImpostoICMSICMSSN202
+    public partial class ICMSSN202
     {
 
         private static XmlSerializer serializer;
@@ -14621,9 +14621,9 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 0)]
         public OrigemMercadoria orig { get; set; }
         [XmlElement(Order = 1)]
-        public TNFeInfNFeDetImpostoICMSICMSSN202CSOSN CSOSN { get; set; }
+        public ICMSSN202CSOSN CSOSN { get; set; }
         [XmlElement(Order = 2)]
-        public TNFeInfNFeDetImpostoICMSICMSSN202ModBCST modBCST { get; set; }
+        public ICMSSN202ModBCST modBCST { get; set; }
         [XmlElement(Order = 3)]
         public string pMVAST { get; set; }
         [XmlElement(Order = 4)]
@@ -14641,7 +14641,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(TNFeInfNFeDetImpostoICMSICMSSN202));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(ICMSSN202));
                 }
                 return serializer;
             }
@@ -14649,7 +14649,7 @@ namespace NFCerta.NFe.Schemas
 
         #region Serialize/Deserialize
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMSSN202 object into an XML string
+        /// Serializes current ICMSSN202 object into an XML string
         /// </summary>
         /// <returns>string XML value</returns>
         public virtual string Serialize()
@@ -14678,16 +14678,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes workflow markup into an TNFeInfNFeDetImpostoICMSICMSSN202 object
+        /// Deserializes workflow markup into an ICMSSN202 object
         /// </summary>
         /// <param name="input">string workflow markup to deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMSSN202 object</param>
+        /// <param name="obj">Output ICMSSN202 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMSSN202 obj, out Exception exception)
+        public static bool Deserialize(string input, out ICMSSN202 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMSSN202);
+            obj = default(ICMSSN202);
             try
             {
                 obj = Deserialize(input);
@@ -14700,19 +14700,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMSSN202 obj)
+        public static bool Deserialize(string input, out ICMSSN202 obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMSSN202 Deserialize(string input)
+        public static ICMSSN202 Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((TNFeInfNFeDetImpostoICMSICMSSN202)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((ICMSSN202)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -14723,14 +14723,14 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMSSN202 Deserialize(Stream s)
+        public static ICMSSN202 Deserialize(Stream s)
         {
-            return ((TNFeInfNFeDetImpostoICMSICMSSN202)(Serializer.Deserialize(s)));
+            return ((ICMSSN202)(Serializer.Deserialize(s)));
         }
         #endregion
 
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMSSN202 object into file
+        /// Serializes current ICMSSN202 object into file
         /// </summary>
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
@@ -14771,16 +14771,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes xml markup from file into an TNFeInfNFeDetImpostoICMSICMSSN202 object
+        /// Deserializes xml markup from file into an ICMSSN202 object
         /// </summary>
         /// <param name="fileName">string xml file to load and deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMSSN202 object</param>
+        /// <param name="obj">Output ICMSSN202 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMSSN202 obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out ICMSSN202 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMSSN202);
+            obj = default(ICMSSN202);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -14793,13 +14793,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMSSN202 obj)
+        public static bool LoadFromFile(string fileName, out ICMSSN202 obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMSSN202 LoadFromFile(string fileName)
+        public static ICMSSN202 LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;
@@ -14829,7 +14829,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMSSN202CSOSN
+    public enum ICMSSN202CSOSN
     {
 
         /// <remarks/>
@@ -14844,7 +14844,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMSSN202ModBCST
+    public enum ICMSSN202ModBCST
     {
 
         /// <remarks/>
@@ -14876,7 +14876,7 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TNFeInfNFeDetImpostoICMSICMSSN500
+    public partial class ICMSSN500
     {
 
         private static XmlSerializer serializer;
@@ -14884,7 +14884,7 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 0)]
         public OrigemMercadoria orig { get; set; }
         [XmlElement(Order = 1)]
-        public TNFeInfNFeDetImpostoICMSICMSSN500CSOSN CSOSN { get; set; }
+        public ICMSSN500CSOSN CSOSN { get; set; }
         [XmlElement(Order = 2)]
         public string vBCSTRet { get; set; }
         [XmlElement(Order = 3)]
@@ -14896,7 +14896,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(TNFeInfNFeDetImpostoICMSICMSSN500));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(ICMSSN500));
                 }
                 return serializer;
             }
@@ -14904,7 +14904,7 @@ namespace NFCerta.NFe.Schemas
 
         #region Serialize/Deserialize
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMSSN500 object into an XML string
+        /// Serializes current ICMSSN500 object into an XML string
         /// </summary>
         /// <returns>string XML value</returns>
         public virtual string Serialize()
@@ -14933,16 +14933,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes workflow markup into an TNFeInfNFeDetImpostoICMSICMSSN500 object
+        /// Deserializes workflow markup into an ICMSSN500 object
         /// </summary>
         /// <param name="input">string workflow markup to deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMSSN500 object</param>
+        /// <param name="obj">Output ICMSSN500 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMSSN500 obj, out Exception exception)
+        public static bool Deserialize(string input, out ICMSSN500 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMSSN500);
+            obj = default(ICMSSN500);
             try
             {
                 obj = Deserialize(input);
@@ -14955,19 +14955,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMSSN500 obj)
+        public static bool Deserialize(string input, out ICMSSN500 obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMSSN500 Deserialize(string input)
+        public static ICMSSN500 Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((TNFeInfNFeDetImpostoICMSICMSSN500)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((ICMSSN500)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -14978,14 +14978,14 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMSSN500 Deserialize(Stream s)
+        public static ICMSSN500 Deserialize(Stream s)
         {
-            return ((TNFeInfNFeDetImpostoICMSICMSSN500)(Serializer.Deserialize(s)));
+            return ((ICMSSN500)(Serializer.Deserialize(s)));
         }
         #endregion
 
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMSSN500 object into file
+        /// Serializes current ICMSSN500 object into file
         /// </summary>
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
@@ -15026,16 +15026,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes xml markup from file into an TNFeInfNFeDetImpostoICMSICMSSN500 object
+        /// Deserializes xml markup from file into an ICMSSN500 object
         /// </summary>
         /// <param name="fileName">string xml file to load and deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMSSN500 object</param>
+        /// <param name="obj">Output ICMSSN500 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMSSN500 obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out ICMSSN500 obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMSSN500);
+            obj = default(ICMSSN500);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -15048,13 +15048,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMSSN500 obj)
+        public static bool LoadFromFile(string fileName, out ICMSSN500 obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMSSN500 LoadFromFile(string fileName)
+        public static ICMSSN500 LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;
@@ -15084,7 +15084,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMSSN500CSOSN
+    public enum ICMSSN500CSOSN
     {
 
         /// <remarks/>
@@ -15146,7 +15146,7 @@ namespace NFCerta.NFe.Schemas
 
         #region Serialize/Deserialize
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMSSN900 object into an XML string
+        /// Serializes current ICMSSN900 object into an XML string
         /// </summary>
         /// <returns>string XML value</returns>
         public virtual string Serialize()
@@ -15175,10 +15175,10 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes workflow markup into an TNFeInfNFeDetImpostoICMSICMSSN900 object
+        /// Deserializes workflow markup into an ICMSSN900 object
         /// </summary>
         /// <param name="input">string workflow markup to deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMSSN900 object</param>
+        /// <param name="obj">Output ICMSSN900 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
         public static bool Deserialize(string input, out ImpostoICMSN900 obj, out Exception exception)
@@ -15227,7 +15227,7 @@ namespace NFCerta.NFe.Schemas
         #endregion
 
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMSSN900 object into file
+        /// Serializes current ICMSSN900 object into file
         /// </summary>
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
@@ -15268,10 +15268,10 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes xml markup from file into an TNFeInfNFeDetImpostoICMSICMSSN900 object
+        /// Deserializes xml markup from file into an ICMSSN900 object
         /// </summary>
         /// <param name="fileName">string xml file to load and deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMSSN900 object</param>
+        /// <param name="obj">Output ICMSSN900 object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
         public static bool LoadFromFile(string fileName, out ImpostoICMSN900 obj, out Exception exception)
@@ -15392,7 +15392,7 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TNFeInfNFeDetImpostoICMSICMSST
+    public partial class ICMSST
     {
 
         private static XmlSerializer serializer;
@@ -15400,7 +15400,7 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 0)]
         public OrigemMercadoria orig { get; set; }
         [XmlElement(Order = 1)]
-        public TNFeInfNFeDetImpostoICMSICMSSTCST CST { get; set; }
+        public ICMSSTCST CST { get; set; }
         [XmlElement(Order = 2)]
         public string vBCSTRet { get; set; }
         [XmlElement(Order = 3)]
@@ -15416,7 +15416,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(TNFeInfNFeDetImpostoICMSICMSST));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(ICMSST));
                 }
                 return serializer;
             }
@@ -15424,7 +15424,7 @@ namespace NFCerta.NFe.Schemas
 
         #region Serialize/Deserialize
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMSST object into an XML string
+        /// Serializes current ICMSST object into an XML string
         /// </summary>
         /// <returns>string XML value</returns>
         public virtual string Serialize()
@@ -15453,16 +15453,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes workflow markup into an TNFeInfNFeDetImpostoICMSICMSST object
+        /// Deserializes workflow markup into an ICMSST object
         /// </summary>
         /// <param name="input">string workflow markup to deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMSST object</param>
+        /// <param name="obj">Output ICMSST object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMSST obj, out Exception exception)
+        public static bool Deserialize(string input, out ICMSST obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMSST);
+            obj = default(ICMSST);
             try
             {
                 obj = Deserialize(input);
@@ -15475,19 +15475,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoICMSICMSST obj)
+        public static bool Deserialize(string input, out ICMSST obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMSST Deserialize(string input)
+        public static ICMSST Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((TNFeInfNFeDetImpostoICMSICMSST)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((ICMSST)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -15498,14 +15498,14 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMSST Deserialize(Stream s)
+        public static ICMSST Deserialize(Stream s)
         {
-            return ((TNFeInfNFeDetImpostoICMSICMSST)(Serializer.Deserialize(s)));
+            return ((ICMSST)(Serializer.Deserialize(s)));
         }
         #endregion
 
         /// <summary>
-        /// Serializes current TNFeInfNFeDetImpostoICMSICMSST object into file
+        /// Serializes current ICMSST object into file
         /// </summary>
         /// <param name="fileName">full path of outupt xml file</param>
         /// <param name="exception">output Exception value if failed</param>
@@ -15546,16 +15546,16 @@ namespace NFCerta.NFe.Schemas
         }
 
         /// <summary>
-        /// Deserializes xml markup from file into an TNFeInfNFeDetImpostoICMSICMSST object
+        /// Deserializes xml markup from file into an ICMSST object
         /// </summary>
         /// <param name="fileName">string xml file to load and deserialize</param>
-        /// <param name="obj">Output TNFeInfNFeDetImpostoICMSICMSST object</param>
+        /// <param name="obj">Output ICMSST object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMSST obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out ICMSST obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoICMSICMSST);
+            obj = default(ICMSST);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -15568,13 +15568,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoICMSICMSST obj)
+        public static bool LoadFromFile(string fileName, out ICMSST obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoICMSICMSST LoadFromFile(string fileName)
+        public static ICMSST LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;
@@ -15604,7 +15604,7 @@ namespace NFCerta.NFe.Schemas
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [Serializable]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TNFeInfNFeDetImpostoICMSICMSSTCST
+    public enum ICMSSTCST
     {
 
         /// <remarks/>
@@ -15616,7 +15616,7 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TNFeInfNFeDetImpostoII
+    public partial class DetImpostoII
     {
 
         private static XmlSerializer serializer;
@@ -15636,7 +15636,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(TNFeInfNFeDetImpostoII));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(DetImpostoII));
                 }
                 return serializer;
             }
@@ -15679,10 +15679,10 @@ namespace NFCerta.NFe.Schemas
         /// <param name="obj">Output TNFeInfNFeDetImpostoII object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoII obj, out Exception exception)
+        public static bool Deserialize(string input, out DetImpostoII obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoII);
+            obj = default(DetImpostoII);
             try
             {
                 obj = Deserialize(input);
@@ -15695,19 +15695,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoII obj)
+        public static bool Deserialize(string input, out DetImpostoII obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoII Deserialize(string input)
+        public static DetImpostoII Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((TNFeInfNFeDetImpostoII)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((DetImpostoII)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -15718,9 +15718,9 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static TNFeInfNFeDetImpostoII Deserialize(Stream s)
+        public static DetImpostoII Deserialize(Stream s)
         {
-            return ((TNFeInfNFeDetImpostoII)(Serializer.Deserialize(s)));
+            return ((DetImpostoII)(Serializer.Deserialize(s)));
         }
         #endregion
 
@@ -15772,10 +15772,10 @@ namespace NFCerta.NFe.Schemas
         /// <param name="obj">Output TNFeInfNFeDetImpostoII object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoII obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out DetImpostoII obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoII);
+            obj = default(DetImpostoII);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -15788,13 +15788,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoII obj)
+        public static bool LoadFromFile(string fileName, out DetImpostoII obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoII LoadFromFile(string fileName)
+        public static DetImpostoII LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;
@@ -15825,7 +15825,7 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TNFeInfNFeDetImpostoISSQN
+    public partial class DetImpostoISSQN
     {
 
         private System.Nullable<Tpais> _cPais;
@@ -15905,7 +15905,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(TNFeInfNFeDetImpostoISSQN));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(DetImpostoISSQN));
                 }
                 return serializer;
             }
@@ -15948,10 +15948,10 @@ namespace NFCerta.NFe.Schemas
         /// <param name="obj">Output TNFeInfNFeDetImpostoISSQN object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoISSQN obj, out Exception exception)
+        public static bool Deserialize(string input, out DetImpostoISSQN obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoISSQN);
+            obj = default(DetImpostoISSQN);
             try
             {
                 obj = Deserialize(input);
@@ -15964,19 +15964,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoISSQN obj)
+        public static bool Deserialize(string input, out DetImpostoISSQN obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoISSQN Deserialize(string input)
+        public static DetImpostoISSQN Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((TNFeInfNFeDetImpostoISSQN)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((DetImpostoISSQN)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -15987,9 +15987,9 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static TNFeInfNFeDetImpostoISSQN Deserialize(Stream s)
+        public static DetImpostoISSQN Deserialize(Stream s)
         {
-            return ((TNFeInfNFeDetImpostoISSQN)(Serializer.Deserialize(s)));
+            return ((DetImpostoISSQN)(Serializer.Deserialize(s)));
         }
         #endregion
 
@@ -16041,10 +16041,10 @@ namespace NFCerta.NFe.Schemas
         /// <param name="obj">Output TNFeInfNFeDetImpostoISSQN object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoISSQN obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out DetImpostoISSQN obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoISSQN);
+            obj = default(DetImpostoISSQN);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -16057,13 +16057,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoISSQN obj)
+        public static bool LoadFromFile(string fileName, out DetImpostoISSQN obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoISSQN LoadFromFile(string fileName)
+        public static DetImpostoISSQN LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;
@@ -16736,7 +16736,7 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TNFeInfNFeDetImpostoPIS
+    public partial class DetImpostoPIS
     {
 
         private static XmlSerializer serializer;
@@ -16753,7 +16753,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(TNFeInfNFeDetImpostoPIS));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(DetImpostoPIS));
                 }
                 return serializer;
             }
@@ -16796,10 +16796,10 @@ namespace NFCerta.NFe.Schemas
         /// <param name="obj">Output TNFeInfNFeDetImpostoPIS object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoPIS obj, out Exception exception)
+        public static bool Deserialize(string input, out DetImpostoPIS obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoPIS);
+            obj = default(DetImpostoPIS);
             try
             {
                 obj = Deserialize(input);
@@ -16812,19 +16812,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoPIS obj)
+        public static bool Deserialize(string input, out DetImpostoPIS obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoPIS Deserialize(string input)
+        public static DetImpostoPIS Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((TNFeInfNFeDetImpostoPIS)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((DetImpostoPIS)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -16835,9 +16835,9 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static TNFeInfNFeDetImpostoPIS Deserialize(Stream s)
+        public static DetImpostoPIS Deserialize(Stream s)
         {
-            return ((TNFeInfNFeDetImpostoPIS)(Serializer.Deserialize(s)));
+            return ((DetImpostoPIS)(Serializer.Deserialize(s)));
         }
         #endregion
 
@@ -16889,10 +16889,10 @@ namespace NFCerta.NFe.Schemas
         /// <param name="obj">Output TNFeInfNFeDetImpostoPIS object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoPIS obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out DetImpostoPIS obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoPIS);
+            obj = default(DetImpostoPIS);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -16905,13 +16905,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoPIS obj)
+        public static bool LoadFromFile(string fileName, out DetImpostoPIS obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoPIS LoadFromFile(string fileName)
+        public static DetImpostoPIS LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;
@@ -18023,7 +18023,7 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TNFeInfNFeDetImpostoPISST
+    public partial class DetImpostoPISST
     {
 
         private static XmlSerializer serializer;
@@ -18049,7 +18049,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(TNFeInfNFeDetImpostoPISST));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(DetImpostoPISST));
                 }
                 return serializer;
             }
@@ -18092,10 +18092,10 @@ namespace NFCerta.NFe.Schemas
         /// <param name="obj">Output TNFeInfNFeDetImpostoPISST object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoPISST obj, out Exception exception)
+        public static bool Deserialize(string input, out DetImpostoPISST obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoPISST);
+            obj = default(DetImpostoPISST);
             try
             {
                 obj = Deserialize(input);
@@ -18108,19 +18108,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoPISST obj)
+        public static bool Deserialize(string input, out DetImpostoPISST obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoPISST Deserialize(string input)
+        public static DetImpostoPISST Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((TNFeInfNFeDetImpostoPISST)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((DetImpostoPISST)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -18131,9 +18131,9 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static TNFeInfNFeDetImpostoPISST Deserialize(Stream s)
+        public static DetImpostoPISST Deserialize(Stream s)
         {
-            return ((TNFeInfNFeDetImpostoPISST)(Serializer.Deserialize(s)));
+            return ((DetImpostoPISST)(Serializer.Deserialize(s)));
         }
         #endregion
 
@@ -18185,10 +18185,10 @@ namespace NFCerta.NFe.Schemas
         /// <param name="obj">Output TNFeInfNFeDetImpostoPISST object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoPISST obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out DetImpostoPISST obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoPISST);
+            obj = default(DetImpostoPISST);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -18201,13 +18201,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoPISST obj)
+        public static bool LoadFromFile(string fileName, out DetImpostoPISST obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoPISST LoadFromFile(string fileName)
+        public static DetImpostoPISST LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;
@@ -18260,7 +18260,7 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TNFeInfNFeDetImpostoCOFINS
+    public partial class DetImpostoCOFINS
     {
 
         private static XmlSerializer serializer;
@@ -18277,7 +18277,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(TNFeInfNFeDetImpostoCOFINS));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(DetImpostoCOFINS));
                 }
                 return serializer;
             }
@@ -18320,10 +18320,10 @@ namespace NFCerta.NFe.Schemas
         /// <param name="obj">Output TNFeInfNFeDetImpostoCOFINS object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoCOFINS obj, out Exception exception)
+        public static bool Deserialize(string input, out DetImpostoCOFINS obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoCOFINS);
+            obj = default(DetImpostoCOFINS);
             try
             {
                 obj = Deserialize(input);
@@ -18336,19 +18336,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoCOFINS obj)
+        public static bool Deserialize(string input, out DetImpostoCOFINS obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoCOFINS Deserialize(string input)
+        public static DetImpostoCOFINS Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((TNFeInfNFeDetImpostoCOFINS)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((DetImpostoCOFINS)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -18359,9 +18359,9 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static TNFeInfNFeDetImpostoCOFINS Deserialize(Stream s)
+        public static DetImpostoCOFINS Deserialize(Stream s)
         {
-            return ((TNFeInfNFeDetImpostoCOFINS)(Serializer.Deserialize(s)));
+            return ((DetImpostoCOFINS)(Serializer.Deserialize(s)));
         }
         #endregion
 
@@ -18413,10 +18413,10 @@ namespace NFCerta.NFe.Schemas
         /// <param name="obj">Output TNFeInfNFeDetImpostoCOFINS object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoCOFINS obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out DetImpostoCOFINS obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoCOFINS);
+            obj = default(DetImpostoCOFINS);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -18429,13 +18429,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoCOFINS obj)
+        public static bool LoadFromFile(string fileName, out DetImpostoCOFINS obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoCOFINS LoadFromFile(string fileName)
+        public static DetImpostoCOFINS LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;
@@ -19594,7 +19594,7 @@ namespace NFCerta.NFe.Schemas
     [Serializable]
     [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TNFeInfNFeDetImpostoCOFINSST
+    public partial class DetImpostoCOFINSST
     {
 
         private static XmlSerializer serializer;
@@ -19620,7 +19620,7 @@ namespace NFCerta.NFe.Schemas
             {
                 if ((serializer == null))
                 {
-                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(TNFeInfNFeDetImpostoCOFINSST));
+                    serializer = new XmlSerializerFactory().CreateSerializer(typeof(DetImpostoCOFINSST));
                 }
                 return serializer;
             }
@@ -19663,10 +19663,10 @@ namespace NFCerta.NFe.Schemas
         /// <param name="obj">Output TNFeInfNFeDetImpostoCOFINSST object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoCOFINSST obj, out Exception exception)
+        public static bool Deserialize(string input, out DetImpostoCOFINSST obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoCOFINSST);
+            obj = default(DetImpostoCOFINSST);
             try
             {
                 obj = Deserialize(input);
@@ -19679,19 +19679,19 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool Deserialize(string input, out TNFeInfNFeDetImpostoCOFINSST obj)
+        public static bool Deserialize(string input, out DetImpostoCOFINSST obj)
         {
             Exception exception = null;
             return Deserialize(input, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoCOFINSST Deserialize(string input)
+        public static DetImpostoCOFINSST Deserialize(string input)
         {
             StringReader stringReader = null;
             try
             {
                 stringReader = new StringReader(input);
-                return ((TNFeInfNFeDetImpostoCOFINSST)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
+                return ((DetImpostoCOFINSST)(Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader))));
             }
             finally
             {
@@ -19702,9 +19702,9 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static TNFeInfNFeDetImpostoCOFINSST Deserialize(Stream s)
+        public static DetImpostoCOFINSST Deserialize(Stream s)
         {
-            return ((TNFeInfNFeDetImpostoCOFINSST)(Serializer.Deserialize(s)));
+            return ((DetImpostoCOFINSST)(Serializer.Deserialize(s)));
         }
         #endregion
 
@@ -19756,10 +19756,10 @@ namespace NFCerta.NFe.Schemas
         /// <param name="obj">Output TNFeInfNFeDetImpostoCOFINSST object</param>
         /// <param name="exception">output Exception value if deserialize failed</param>
         /// <returns>true if this Serializer can deserialize the object; otherwise, false</returns>
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoCOFINSST obj, out Exception exception)
+        public static bool LoadFromFile(string fileName, out DetImpostoCOFINSST obj, out Exception exception)
         {
             exception = null;
-            obj = default(TNFeInfNFeDetImpostoCOFINSST);
+            obj = default(DetImpostoCOFINSST);
             try
             {
                 obj = LoadFromFile(fileName);
@@ -19772,13 +19772,13 @@ namespace NFCerta.NFe.Schemas
             }
         }
 
-        public static bool LoadFromFile(string fileName, out TNFeInfNFeDetImpostoCOFINSST obj)
+        public static bool LoadFromFile(string fileName, out DetImpostoCOFINSST obj)
         {
             Exception exception = null;
             return LoadFromFile(fileName, out obj, out exception);
         }
 
-        public static TNFeInfNFeDetImpostoCOFINSST LoadFromFile(string fileName)
+        public static DetImpostoCOFINSST LoadFromFile(string fileName)
         {
             FileStream file = null;
             StreamReader sr = null;

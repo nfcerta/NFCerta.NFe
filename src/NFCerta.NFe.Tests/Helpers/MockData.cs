@@ -107,7 +107,7 @@
                                 COFINSST = null,
                                 Items = new List<object>()
                                 {
-                                    new TNFeInfNFeDetImpostoICMS()
+                                    new DetImpostoICMS()
                                     {
                                         Item = new ImpostoICMSN900()
                                         {
@@ -159,7 +159,7 @@
                                 COFINSST = null,
                                 Items = new List<object>()
                                 {
-                                    new TNFeInfNFeDetImpostoICMS() {
+                                    new DetImpostoICMS() {
                                         Item = new ImpostoICMSN900()
                                         {
                                             orig = OrigemMercadoria.Item0,
