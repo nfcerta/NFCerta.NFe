@@ -4345,11 +4345,11 @@ namespace NFCerta.NFe.Schemas
 
         /// <remarks/>
         [XmlEnumAttribute("2")]
-        Item2,
+        SimplesExcessoDeSublimiteDeReceita,
 
         /// <remarks/>
         [XmlEnumAttribute("3")]
-        Item3,
+        RegimeNormal,
     }
 
     /// <summary>
