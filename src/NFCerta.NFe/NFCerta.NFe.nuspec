@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>0.2.1-alpha</version>
+    <title>$title$</title>
+    <authors>vicentedealencar felipeleusin</authors>
+    <owners>vicentedealencar felipeleusin</owners>
+    <licenseUrl>https://github.com/nfcerta/NFCerta.NFe</licenseUrl>
+    <projectUrl>https://github.com/nfcerta/NFCerta.NFe</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Biblioteca para auxiliar a trabalhar com NFCe</description>
+    <releaseNotes>Renomeado outras opÃ§Ãµes no enum de CodigoRegimeTributario</releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>NFe NFCe</tags>
+  </metadata>
+</package>

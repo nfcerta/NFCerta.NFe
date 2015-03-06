@@ -1,8 +1,8 @@
 namespace NFCerta.NFe.Util
 {
-    using NFCerta.NFe.Schemas.TiposBasicos;
-using NodaTime;
-using System;
+    using Schemas.TiposBasicos;
+    using NodaTime;
+    using System;
 
     public static class DateTimeHelpers
     {
