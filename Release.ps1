@@ -47,7 +47,7 @@ Update-AssemblyInfo `
         -File "$src_dir\$ProjectName\Properties\AssemblyInfo.cs" `
         -Version $Version `
 
-msbuild "/p:OutDir=$build_dir" /p:Configuration=Release "$src_dir\$ProjectName\$ProjectName.csproj"
+msbuild "/p:OutDir=$src_dir\$ProjectName\bin\Release" /p:Configuration=Release "$src_dir\$ProjectName\$ProjectName.csproj"
 
 if ($PreRelease.IsPresent) {
     $NugetVersion = "$Version-alpha"
