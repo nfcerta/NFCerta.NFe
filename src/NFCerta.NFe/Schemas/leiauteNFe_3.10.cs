@@ -11654,7 +11654,7 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 7)]
         public string vICMSDeson { get; set; }
         [XmlElement(Order = 8)]
-        public ICMS20MotDesICMS motDesICMS { get; set; }
+        public ICMS20MotDesICMS? motDesICMS { get; set; }
 
         private static XmlSerializer Serializer
         {
@@ -11928,7 +11928,7 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 8)]
         public string vICMSDeson { get; set; }
         [XmlElement(Order = 9)]
-        public ICMS30MotDesICMS motDesICMS { get; set; }
+        public ICMS30MotDesICMS? motDesICMS { get; set; }
 
         private static XmlSerializer Serializer
         {
@@ -12198,7 +12198,7 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 2)]
         public string vICMSDeson { get; set; }
         [XmlElement(Order = 3)]
-        public ICMS40MotDesICMS motDesICMS { get; set; }
+        public ICMS40MotDesICMS? motDesICMS { get; set; }
 
         private static XmlSerializer Serializer
         {
@@ -13006,7 +13006,7 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 13)]
         public string vICMSDeson { get; set; }
         [XmlElement(Order = 14)]
-        public ICMS70MotDesICMS motDesICMS { get; set; }
+        public ICMS70MotDesICMS? motDesICMS { get; set; }
 
         private static XmlSerializer Serializer
         {
@@ -13321,7 +13321,7 @@ namespace NFCerta.NFe.Schemas
         [XmlElement(Order = 13)]
         public string vICMSDeson { get; set; }
         [XmlElement(Order = 14)]
-        public ICMS90MotDesICMS motDesICMS { get; set; }
+        public ICMS90MotDesICMS? motDesICMS { get; set; }
 
         private static XmlSerializer Serializer
         {
